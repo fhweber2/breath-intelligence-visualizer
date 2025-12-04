@@ -139,7 +139,16 @@ body {
       rgba(120, 200, 255, 0.08),
       transparent 55%);
   filter: blur(8px);
+  z-index: 0;
 }
+
+/* z-index layering */
+
+.earth-lines { z-index: 1; }
+.eclipse-ring { z-index: 1; }
+.orb-ring     { z-index: 2; }
+.group-orbs   { z-index: 3; }
+.orb          { z-index: 4; }
 
 /* Orb */
 
@@ -185,7 +194,7 @@ body {
 
 @keyframes orbit-rotate {
   from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  to   { transform: rotate(360deg); }
 }
 
 .orb-particle {
@@ -212,6 +221,9 @@ body {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.45s ease-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .group-orbs.active {
@@ -246,6 +258,9 @@ body {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.5s ease-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .eclipse-ring.active {
@@ -253,6 +268,7 @@ body {
 }
 
 .eclipse-core {
+  position: absolute;
   width: 130px;
   height: 130px;
   border-radius: 999px;
@@ -342,7 +358,7 @@ body {
 
 @keyframes wave-move {
   from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  to   { transform: translateX(-50%); }
 }
 
 /* Info Panel */
