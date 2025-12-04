@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Breath Intelligence Visualizer — Multi-Mode Concept Demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+      <div class="header-text">
+        <h1>Breath Intelligence Visualizer</h1>
+        <p class="subtitle">
+          Multi-mode concept interface for a synthetic breathing cycle, coherence state, and ambient field.
+        </p>
+      </div>
+      <div class="mode-switcher">
+        <span class="mode-label">Mode</span>
+        <button class="mode-btn active" data-mode="coherence">Coherence</button>
+        <button class="mode-btn" data-mode="earth">Earth</button>
+        <button class="mode-btn" data-mode="eclipse">Eclipse</button>
+        <button class="mode-btn" data-mode="group">Group Field</button>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="visual-panel">
+        <div class="field" id="field">
+          <div class="field-glow"></div>
+
+          <div class="orb-ring">
+            <div class="orb-particle particle-1"></div>
+            <div class="orb-particle particle-2"></div>
+            <div class="orb-particle particle-3"></div>
+          </div>
+
+          <div class="group-orbs" id="group-orbs">
+            <div class="group-orb g1"></div>
+            <div class="group-orb g2"></div>
+            <div class="group-orb g3"></div>
+            <div class="group-orb g4"></div>
+          </div>
+
+          <div id="breath-orb" class="orb"></div>
+
+          <div class="eclipse-ring" id="eclipse-ring">
+            <div class="eclipse-core"></div>
+            <div class="eclipse-corona"></div>
+          </div>
+
+          <div class="earth-lines" id="earth-lines">
+            <div class="earth-line e1"></div>
+            <div class="earth-line e2"></div>
+            <div class="earth-line e3"></div>
+          </div>
+        </div>
+
+        <div class="wave-band">
+          <div class="wave wave-1"></div>
+          <div class="wave wave-2"></div>
+        </div>
+      </section>
+
+      <section class="info-panel">
+        <div class="state-row">
+          <p id="state-text" class="state-text">Initializing…</p>
+          <span id="cycle-text" class="cycle-text">Cycle 0</span>
+        </div>
+
+        <div class="rhythm-bar-wrapper">
+          <div class="rhythm-labels">
+            <span>Inhale</span>
+            <span>Exhale</span>
+          </div>
+          <div class="rhythm-track">
+            <div id="rhythm-indicator" class="rhythm-indicator"></div>
+          </div>
+        </div>
+
+        <div class="pill pill-coherent">
+          <span class="pill-dot"></span>
+          <span>Coherence glimpse every 4 cycles (synthetic)</span>
+        </div>
+
+        <div class="pill pill-mode">
+          <span class="pill-dot pill-dot-mode"></span>
+          <span id="mode-pill-text">
+            Coherence Mode · field-centric visualization
+          </span>
+        </div>
+
+        <div class="copy-block">
+          <h2>About this demo</h2>
+          <p>
+            This interface uses a timed breathing pattern (4-second inhale, 6-second exhale)
+            and a periodic “coherent” state, rendered through different visual “lenses”.
+            Each mode applies the same synthetic rhythm to a different conceptual layer:
+            individual coherence, Earth resonance, eclipse alignment, and group field dynamics.
+          </p>
+          <p>
+            All animation is driven by timing and CSS classes only. No sensor data, analytics,
+            or proprietary signal processing are included. This is a conceptual sketch of how
+            breath rhythm and coherence could be experienced visually across multiple contexts.
+          </p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
